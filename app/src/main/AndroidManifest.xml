@@ -25,27 +25,20 @@
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="MainActivity" />
+                android:value="com.example.manuchaudhary.coolweather.MainActivity" />
         </activity>
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/SettingsTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="MainActivity" />
+                android:value="com.example.manuchaudhary.coolweather.MainActivity" />
         </activity>
         <provider
             android:authorities="com.example.manuchaudhary.coolweather"
-            android:name=".data.WeatherProvider"
-            android:enabled="true"
-            android:exported="true" />
+            android:name=".data.WeatherProvider" />
     </application>
-
-    <permission android:name="com.myapp.LICENSE_TO_KILL"
-        android:protectionLevel="dangerous"
-        android:label="Licensed to kill">
-
-        </permission>
 
 </manifest>
