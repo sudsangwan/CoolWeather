@@ -228,7 +228,6 @@ public class WeatherProvider extends ContentProvider {
                 throw new UnsupportedOperationException("Unknown uri: " + uri);
         }
         getContext().getContentResolver().notifyChange(uri, null);
-        //db.close();
         return returnUri;
     }
 
@@ -324,8 +323,7 @@ public class WeatherProvider extends ContentProvider {
     }
 
     // You do not need to call this method. This is a method specifically to assist the testing
-    // framework in running smoothly. You can read more at:
-    // http://developer.android.com/reference/android/content/ContentProvider.html#shutdown()
+    // framework in running smoothly.
     @Override
     @TargetApi(11)
     public void shutdown() {
